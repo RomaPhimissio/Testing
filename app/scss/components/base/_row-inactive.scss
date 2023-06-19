@@ -1,0 +1,9 @@
+.row-active {
+
+    // .row-active__text
+
+    &__text {
+        font-weight: 500;
+        @include fl(14, 21);
+    }
+}

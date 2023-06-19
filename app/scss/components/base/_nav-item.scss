@@ -1,0 +1,87 @@
+.nav-item {
+    color: $colorNav;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    cursor: pointer;
+    border-radius: 8px;
+    padding: 11px 8px 11px 11px;
+
+    @media (max-width: 1149px) {
+        padding: 11px 6px 11px 8px;
+    }
+
+    &:hover {
+        background-color: lighten(#5932EA, 30%);
+
+        .nav-item__text {
+            color: $white;
+        }
+
+        svg {
+            path {
+                stroke: $white;
+            }
+
+        }
+
+        .d,
+        .discount,
+        .question {
+            color: $white;
+        }
+    }
+
+    // .nav-item__text
+
+    &__text {
+        font-weight: 500;
+        @include fl(14, 21);
+
+    }
+
+    &__ic {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: auto
+    }
+
+    svg {
+        path {
+            stroke: $colorNav;
+        }
+    }
+}
+
+.nav-item.current {
+    background-color: $plum;
+    // outline: none;
+
+    .nav-item__text {
+        color: $white;
+    }
+
+    svg {
+        path {
+            stroke: $white;
+        }
+
+    }
+
+    .d,
+    .discount,
+    .question {
+        color: $white;
+    }
+}
+
+.nav-item:nth-child(4) {
+    margin-top: -4px;
+}
+
+.d,
+.discount,
+.question {
+    @include fz(23);
+}

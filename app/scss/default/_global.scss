@@ -1,0 +1,43 @@
+body.lock {
+   overflow: hidden;
+}
+
+body {
+   font-family: 'Poppins', sans-serif;
+   @include fz(16);
+   font-weight: 400;
+}
+
+[class*="__container"] {
+   padding-left: percent(20, 375);
+   padding-right: percent(20, 375);
+}
+
+.wrapper {
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+   min-height: 100vh;
+}
+
+main {
+   flex: 1 1 auto;
+}
+
+img {
+   max-width: 100%;
+   height: auto;
+}
+
+.visually-hidden {
+   position: absolute;
+   width: 1px;
+   height: 1px;
+   margin: -1px;
+   border: 0;
+   padding: 0;
+   white-space: nowrap;
+   clip-path: inset(100%);
+   clip: rect(0 0 0 0);
+   overflow: hidden;
+}

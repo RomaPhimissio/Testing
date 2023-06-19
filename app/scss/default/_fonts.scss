@@ -1,0 +1,95 @@
+// Подключение локальных шрифтов
+@font-face {
+    font-family: 'Montserrat';
+    font-display: swap;
+    font-style: normal;
+    font-weight: 400;
+    src: url("../fonts/Poppins-Regular.woff") format("woff"),
+        url("../fonts/Poppins-Regular.woff2") format("woff2");
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    font-display: swap;
+    font-style: normal;
+    font-weight: 500;
+    src: url("../fonts/Poppins-Medium.woff") format("woff"),
+        url("../fonts/Poppins-Medium.woff2") format("woff2");
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    font-display: swap;
+    font-style: normal;
+    font-weight: 600;
+    src: url("../fonts/Poppins-SemiBold.woff") format("woff"),
+        url("../fonts/Poppins-SemiBold.woff2") format("woff2");
+}
+
+
+@font-face {
+    font-family: 'icons';
+    src: url('../fonts/icons.eot?ddprne');
+    src: url('../fonts/icons.eot?ddprne#iefix') format('embedded-opentype'),
+        url('../fonts/icons.ttf?ddprne') format('truetype'),
+        url('../fonts/icons.woff?ddprne') format('woff'),
+        url('../fonts/icons.svg?ddprne#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+}
+
+i {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'icons' !important;
+    speak: never;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.d:before {
+    content: "\e900";
+}
+
+.arrow:before {
+    content: "\e901";
+}
+
+.arrow-pag:before {
+    content: "\e902";
+}
+
+.discount:before {
+    content: "\e903";
+}
+
+.key:before {
+    content: "\e904";
+}
+
+.question:before {
+    content: "\e905";
+}
+
+.search:before {
+    content: "\e906";
+}
+
+.setting:before {
+    content: "\e907";
+}
+
+.user:before {
+    content: "\e908";
+}
+
+.wallet:before {
+    content: "\e909";
+}

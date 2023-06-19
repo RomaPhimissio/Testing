@@ -1,0 +1,72 @@
+.accord {
+
+    // .accord__column Lines
+
+    &__column {
+        @media (max-width: 999px) {
+            position: relative;
+        }
+    }
+
+    &__column:not(:last-child)::after {
+        @media (max-width: 999px) {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            background-color: rgba(17, 17, 17, 0.2);
+            width: 100%;
+            height: 1px;
+        }
+
+    }
+
+    // .accord__preview
+
+    &__preview {
+        @media (max-width: 999px) {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 15px 0;
+        }
+
+        i {
+            @media (max-width: 999px) {
+                transform: rotate(90deg);
+                transition: all 0.5s ease 0s;
+            }
+
+            @media (min-width: 1000px) {
+                display: none;
+            }
+        }
+    }
+
+    // .accord__subtitle
+
+    &__subtitle {}
+
+    // .accord__column-block-text
+
+    &__column-block-text {
+        @media (max-width: 999px) {
+            height: 0;
+            overflow: hidden;
+            transition: all 0.5s ease 0s;
+        }
+    }
+
+    // .accord__column-text
+
+    &__column-text {}
+}
+
+.arrow {}
+
+.opened .arrow {
+    transform: rotate(270deg);
+}
+
+.opened .footer__column-block-text {
+    height: auto;
+}

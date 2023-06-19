@@ -1,0 +1,16 @@
+.active {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #008767;
+    background-color: #16C09861;
+    border: 1px solid #00B087;
+    border-radius: 4px;
+    padding: 4px 12px;
+    @include fl(14, 21);
+    font-weight: 500;
+
+    @media (max-width: 1249px) {
+        padding: 4px 7px;
+    }
+}

@@ -1,0 +1,438 @@
+.main {
+    display: flex;
+
+    @media (max-width: 999px) {
+        flex-direction: column;
+    }
+}
+
+.board {
+    flex: 0 1 21.25vw;
+
+    @media (max-width: 1149px) {
+        flex: 0 1 18vw;
+    }
+
+    @media (max-width: 1349px) {
+        flex: 0 1 20vw;
+    }
+
+    // .board__container
+
+    &__container {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding-top: 37px;
+        padding-left: percent(27, 300);
+        padding-right: percent(27, 300);
+
+        @media (max-width: 1149px) {
+            padding-left: percent(15, 300);
+            padding-right: percent(15, 300);
+        }
+    }
+
+    // .board__block-title
+
+    &__block-title {
+        display: flex;
+        margin-bottom: 52px;
+
+        @media (max-width: 999px) {
+            margin-bottom: 30px;
+        }
+    }
+
+    // .board__title
+
+    &__title {
+        font-weight: 600;
+        @include fl(26, 39);
+        color: $black;
+        margin-right: 4px;
+
+        @media (max-width: 999px) {
+            @include fl(23, 27);
+        }
+
+        @media (max-width: 1149px) {
+            @include fl(19, 25);
+            margin-right: 3px;
+        }
+
+        @media (max-width: 1249px) {
+            @include fl(23, 27);
+        }
+    }
+
+    // .board__elem
+
+    &__elem {
+        font-weight: 500;
+        @include fl(10, 15);
+        color: #838383;
+        align-self: flex-end;
+        padding-bottom: 7px;
+
+        @media (max-width: 1249px) {
+            padding-bottom: 2px;
+        }
+    }
+
+    // .board__nav
+
+    &__nav {
+        @media (max-width: 999px) {
+            margin-bottom: 30px;
+        }
+    }
+
+    // .board__list
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    // .board__block-user
+
+    &__block-user {
+        margin-top: auto;
+        display: flex;
+        padding-bottom: 76px;
+        gap: 12px;
+    }
+
+    // .board__pic
+
+    &__pic {}
+
+    // .board__block-name
+
+    &__block-name {
+        display: flex;
+        flex-direction: column;
+        padding-top: 2px;
+    }
+
+    // .board__name
+
+    &__name {
+        color: $black;
+        display: block;
+        @include fl(14, 21);
+        letter-spacing: 0.01em;
+    }
+
+    // .board__desc
+
+    &__desc {
+        color: #757575;
+        @include fl(12, 18);
+        display: block;
+
+    }
+}
+
+.setting {
+    color: $black;
+    @include fz(37);
+    margin-right: 8px;
+
+    @media (max-width: 999px) {
+        @include fz(23);
+        margin-right: 8px;
+    }
+
+    @media (max-width: 1149px) {
+        @include fz(20);
+        margin-right: 3px;
+    }
+
+    @media (max-width: 1249px) {
+        @include fz(23);
+    }
+}
+
+.arrow {
+    color: red;
+    @include fz(10);
+}
+
+
+// ! .data === data === data === data === data === data === data
+
+.data {
+    background-color: #FAFBFF;
+    flex: 1 1 auto;
+
+    // .data__container
+
+    &__container {
+        padding-top: 41px;
+        padding-bottom: 23%;
+        padding-left: percent(63, 1000);
+        padding-right: percent(84, 1000);
+
+        @media (max-width: 1149px) {
+            padding-left: percent(30, 1000);
+            padding-right: percent(45, 1000);
+        }
+
+        @media (max-width: 1349px) {
+            padding-left: percent(40, 1000);
+            padding-right: percent(60, 1000);
+        }
+    }
+
+    // .data__main-text
+
+    &__main-text {
+        color: $black;
+        font-weight: 500;
+        @include fl(24, 36);
+        margin-bottom: 51px;
+
+    }
+
+    // .data__box
+
+    &__box {
+        background-color: $white;
+        box-shadow: 0px 10px 60px rgba(226, 236, 249, 0.5);
+        border-radius: 30px;
+    }
+
+    // .data__board
+
+    &__board {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 15px;
+        padding-top: 30px;
+        padding-left: percent(30, 800);
+        padding-right: percent(44, 800);
+        margin-bottom: 26px;
+    }
+
+    // .data__block-text
+
+    &__block-text {}
+
+    // .data__subtitle
+
+    &__subtitle {
+        font-weight: 600;
+        @include fl(22, 33);
+        color: $black;
+        margin-bottom: 7px;
+        padding-left: 3px;
+    }
+
+    // .data__text
+
+    &__text {
+        color: #16C098;
+        @include fl(14, 21);
+
+    }
+
+    // .data__field
+
+    &__field-wrap {
+
+        padding-top: 14px;
+        flex: 0 1 auto;
+        align-self: flex-start;
+        max-width: 216px;
+        // padding-left: 10px;
+
+        svg {
+            path {
+                stroke: #7E7E7E;
+            }
+
+            width: 29px;
+            height: 27px;
+        }
+    }
+
+    // .data__body
+
+    &__field-body {
+        display: flex;
+        gap: 8px;
+        background-color: #F9FBFF;
+        border-radius: 10px;
+        padding: 5px 8px 7px;
+    }
+
+    // .data__field
+
+    &__field {
+        background-color: transparent;
+        // padding-left: 5px;
+        width: 100%;
+        height: auto;
+
+
+    }
+
+    &__field::placeholder {
+        color: $grey;
+        @include fl(12, 18);
+        letter-spacing: -0.01em;
+    }
+
+    // .data__table
+
+    &__table {}
+
+    // .data__main-row
+
+    &__main-row {
+        display: grid;
+        grid-template-columns: 18% 13.6% 16.3% 22.3% 16% 10%;
+        gap: 15px;
+        flex-wrap: wrap;
+        padding-top: 14px;
+        padding-bottom: 14px;
+        padding-left: percent(31, 800);
+        padding-right: percent(55, 800);
+        position: relative;
+
+        @media (max-width: 649px) {
+            grid-template-columns: 1fr 1fr;
+        }
+
+        @media (max-width: 799px) {
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+
+        @media (max-width: 1149px) {
+            grid-template-columns: 16% 11% 15.7% 22.6% 14% 9.8%;
+            padding-left: percent(21, 800);
+            padding-right: percent(23, 800);
+        }
+    }
+
+    &__main-row::after {
+        content: "";
+        position: absolute;
+        background-color: #EEEEEE;
+        width: 100%;
+        height: 1px;
+        bottom: 0;
+    }
+
+    // .data__row-text
+
+    &__row-text {
+        display: block;
+        color: $grey;
+        font-weight: 500;
+        @include fl(14, 21);
+        width: max-content;
+    }
+
+    // .data__list
+
+    &__list {
+        padding-left: percent(31, 800);
+        padding-right: percent(33, 800);
+
+        @media (max-width: 1149px) {
+            padding-left: percent(21, 800);
+            padding-right: percent(23, 800);
+        }
+    }
+
+    // .data__footer-block
+
+    &__footer-block {
+        display: flex;
+        justify-content: space-between;
+        padding-top: 30px;
+        padding-bottom: 40px;
+        padding-left: percent(31, 800);
+        padding-right: percent(32, 800);
+
+        @media (max-width: 1149px) {
+            flex-wrap: wrap;
+            gap: 35px;
+            padding-left: percent(21, 800);
+            padding-right: percent(23, 800);
+        }
+    }
+
+    // .data__par
+
+    &__par {
+        font-weight: 500;
+        @include fl(14, 21);
+        color: $grey;
+        padding-top: 2px;
+    }
+
+    // .data__pagination
+
+    &__pagination {
+        display: flex;
+        gap: 13px;
+    }
+
+    // .data__pag
+
+    &__pag {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 26px;
+        height: 24px;
+        background: #F5F5F5;
+        border: 1px solid #EEEEEE;
+        border-radius: 4px;
+        font-weight: 500;
+        cursor: pointer;
+    }
+
+    &__pag .active {
+        background-color: $plum;
+    }
+
+    &__points {
+        padding-top: 4px;
+    }
+
+    &__pag-second {
+        .arrow-pag {
+            transform: rotate(180deg);
+        }
+    }
+}
+
+.pag-btn {
+    cursor: pointer;
+    width: 24px;
+    height: 24px;
+}
+
+.pag-btn:hover {
+    background-color: lighten(#5932EA, 30%);
+}
+
+.pag-btn.active {
+    background-color: $plum;
+    color: $white;
+}
+
+.visually-hidden {}
+
+.arrow-pag {
+    color: #404B52;
+    @include fz(7);
+}

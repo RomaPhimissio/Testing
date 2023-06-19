@@ -1,0 +1,16 @@
+.inactive {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #DF0404;
+    background-color: #FFC5C5;
+    border: 1px solid #DF0404;
+    border-radius: 4px;
+    padding: 4px 12px;
+    @include fl(14, 21);
+    font-weight: 500;
+
+    @media (max-width: 1249px) {
+        padding: 4px 7px;
+    }
+}
