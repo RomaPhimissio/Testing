@@ -160,7 +160,26 @@ buttons[0].classList.add('active');
 
 
 // ! Preloader 
-window.addEventListener('load', function () {
+window.addEventListener('DOMContentLoaded', function () {
+   var preloaderContainer = document.getElementById('preloader-container');
    var preloader = document.getElementById('preloader');
-   preloader.style.display = 'none';
+   var start = null;
+
+   function step(timestamp) {
+      if (!start) start = timestamp;
+      var progress = timestamp - start;
+      preloader.style.transform = 'rotate(' + (progress / 3) + 'deg)';
+
+      if (progress < 1500) {
+         window.requestAnimationFrame(step);
+      } else {
+         preloader.style.opacity = '0';
+         setTimeout(function () {
+            preloaderContainer.style.display = 'none';
+         }, 500 - 1500); // Задержка минус продолжительность анимации
+      }
+   }
+
+   window.requestAnimationFrame(step);
 });
+
