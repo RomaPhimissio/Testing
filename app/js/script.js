@@ -157,3 +157,10 @@ buttons.forEach(button => {
 
 // Выбор первой кнопки по умолчанию
 buttons[0].classList.add('active');
+
+
+// ! Preloader 
+window.addEventListener('load', function () {
+   var preloader = document.getElementById('preloader');
+   preloader.style.display = 'none';
+});
