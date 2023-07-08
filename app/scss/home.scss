@@ -11,10 +11,6 @@
 @import "./components/structure/footer";
 
 // Подключение стилей базовых компонентов
-@import "./components/base/pop-up";
-@import "./components/base/spoiler";
-@import "./components/base/dropdown";
-@import "./components/base/accordeon";
 @import "./components/base/active";
 @import "./components/base/inactive";
 @import "./components/base/nav-item";
@@ -22,9 +18,6 @@
 @import "./components/base/row-active";
 @import "./components/base/row-inactive";
 
-
-// Подключение стилей компонентов
-@import "./components/base/btn";
 
 //Подключение стилей конкретной страницы
 @import "./pages/home";

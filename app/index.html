@@ -8,17 +8,18 @@
 
 <body class="home">
   <div class="wrapper">
-    <main class="main">
-      <section class="board">
-        <div class="board__container">
-          <div class="board__block-content">
-            <div class="board__block-title">
+    <main class="page">
+      <h1 class="visually-hidden">Test Task</h1>
+      <nav class="navboard">
+        <div class="navboard__container">
+          <div class="navboard__block-content">
+            <div class="navboard__block-title">
               <i class="setting"></i>
-              <h2 class="board__title">Dashboard</h2>
-              <span class="board__elem">v.01</span>
+              <h2 class="navboard__title">Dashboard</h2>
+              <span class="navboard__elem">v.01</span>
             </div>
-            <nav class="board__nav">
-              <ul class="board__list">
+            <nav class="navboard__nav">
+              <ul class="navboard__list">
                 <li class="nav-item">
                   <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M8 21H14C19 21 21 19 21 14V8C21 3 19 1 14 1H8C3 1 1 3 1 8V14C1 19 3 21 8 21Z"
@@ -95,33 +96,30 @@
               </ul>
             </nav>
           </div>
-          <div class="board__block-user">
-            <div class="board__pic">
-              <picture>
-                <source type="image/webp" srcset="@img/gallery/avatar.webp">
-                <img src="@img/gallery/avatar.png" alt="user">
-              </picture>
+          <div class="navboard__block-user">
+            <div class="navboard__pic-wrap">
+              <div class="navboard__pic"></div>
             </div>
-            <div class="board__block-name">
-              <span class="board__name">Evano</span>
-              <span class="board__desc">Project Manager</span>
+            <div class="navboard__block-name">
+              <span class="navboard__name">Evano</span>
+              <span class="navboard__desc">Project Manager</span>
             </div>
           </div>
         </div>
-      </section>
+      </nav>
 
-      <section class="data">
-        <div class="data__container">
-          <h2 class="visually-hidden">Data base</h2>
-          <p class="data__main-text">Hello Evano 👋🏼,</p>
-          <div class="data__box">
-            <div class="data__board">
-              <div class="data__block-text">
-                <p class="data__subtitle">All Customers</p>
-                <p class="data__text">Active Members</p>
+      <section class="dashboard">
+        <div class="dashboard__container">
+          <h2 class="visually-hidden">dashboard base</h2>
+          <p class="dashboard__main-text">Hello Evano 👋🏼,</p>
+          <div class="dashboard__box">
+            <div class="dashboard__board">
+              <div class="dashboard__block-text">
+                <p class="dashboard__subtitle">All Customers</p>
+                <p class="dashboard__text">Active Members</p>
               </div>
-              <div class="data__field-wrap">
-                <div class="data__field-body">
+              <div class="dashboard__field-wrap">
+                <div class="dashboard__field-body">
                   <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path
                       d="M11 19C15.4183 19 19 15.4183 19 11C19 6.58172 15.4183 3 11 3C6.58172 3 3 6.58172 3 11C3 15.4183 6.58172 19 11 19Z"
@@ -129,111 +127,129 @@
                     <path d="M21 21L16.65 16.65" stroke="#7E7E7E" stroke-width="2" stroke-linecap="round"
                       stroke-linejoin="round" />
                   </svg>
-                  <input class="data__field" type="text" name="texting" placeholder="Search">
+                  <label class="visually-hidden" for="search">Имя пользователя:</label>
+                  <input class="dashboard__field" type="search" name="searching" placeholder="Search" id="search">
                 </div>
               </div>
             </div>
-            <div class="data__table">
-              <div class="data__main-row">
-                <span class="data__row-text">Customer Name</span>
-                <span class="data__row-text">Company</span>
-                <span class="data__row-text">Phone Number</span>
-                <span class="data__row-text">Email</span>
-                <span class="data__row-text">Country</span>
-                <span class="data__row-text">Status</span>
+            <div class="dashboard__table-container">
+              <div class="dashboard__table-wrap">
+                <table class="dashboard__table">
+                  <thead class="dashboard__main-row">
+                    <tr class="dashboard__table-head-row">
+                      <th class="dashboard__table-head-cell"><span class="dashboard__row-text">Customer Name</span>
+                      </th>
+                      <th class="dashboard__table-head-cell"><span class="dashboard__row-text">Company</span></th>
+                      <th class="dashboard__table-head-cell"><span class="dashboard__row-text">Phone Number</span>
+                      </th>
+                      <th class="dashboard__table-head-cell"><span class="dashboard__row-text">Email</span></th>
+                      <th class="dashboard__table-head-cell"><span class="dashboard__row-text">Country</span></th>
+                      <th class="dashboard__table-head-cell"><span class="dashboard__row-text">Status</span></th>
+                    </tr>
+                  </thead>
+                  <tbody class="dashboard__table-body">
+                    @@include('./components/base/_row-active.html', {
+                    'name': 'Jane Cooper',
+                    'company': 'Microsoft',
+                    'number': '(225) 555-0118',
+                    'mail': 'jane@microsoft.com',
+                    'country': 'United States'
+                    })
+                    @@include('./components/base/_row-inactive.html', {
+                    'name': 'Floyd Miles',
+                    'company': 'Yahoo',
+                    'number': '(205) 555-0100',
+                    'mail': 'floyd@yahoo.com',
+                    'country': 'Kiribati'
+                    })
+                    @@include('./components/base/_row-inactive.html', {
+                    'name': 'Ronald Richards',
+                    'company': 'Adobe',
+                    'number': '(302) 555-0107',
+                    'mail': 'ronald@adobe.com',
+                    'country': 'Israel'
+                    })
+                    @@include('./components/base/_row-active.html', {
+                    'name': 'Marvin McKinney',
+                    'company': 'Tesla',
+                    'number': '(252) 555-0126',
+                    'mail': 'marvin@tesla.com',
+                    'country': 'Iran'
+                    })
+                    @@include('./components/base/_row-active.html', {
+                    'name': 'Jerome Bell',
+                    'company': 'Google',
+                    'number': '(629) 555-0129',
+                    'mail': 'jerome@google.com',
+                    'country': 'Réunion'
+                    })
+                    @@include('./components/base/_row-active.html', {
+                    'name': 'Kathryn Murphy',
+                    'company': 'Microsoft',
+                    'number': '(406) 555-0120',
+                    'mail': 'kathryn@microsoft.com',
+                    'country': 'Curaçao'
+                    })
+                    @@include('./components/base/_row-active.html', {
+                    'name': 'Jacob Jones',
+                    'company': 'Yahoo',
+                    'number': '(208) 555-0112',
+                    'mail': 'jacob@yahoo.com',
+                    'country': 'Brazil'
+                    })
+                    @@include('./components/base/_row-inactive.html', {
+                    'name': 'Kristin Watson',
+                    'company': 'Facebook',
+                    'number': '(704) 555-0127',
+                    'mail': 'kristin@facebook.com',
+                    'country': 'Åland Islands'
+                    })
+                  </tbody>
+                </table>
               </div>
-              <ul class="data__list">
-                @@include('./components/base/_row-active.html', {
-                'name': 'Jane Cooper',
-                'company': 'Microsoft',
-                'number': '(225) 555-0118',
-                'mail': 'jane@microsoft.com',
-                'country': 'United States'
-                })
-                @@include('./components/base/_row-inactive.html', {
-                'name': 'Floyd Miles',
-                'company': 'Yahoo',
-                'number': '(205) 555-0100',
-                'mail': 'floyd@yahoo.com',
-                'country': 'Kiribati'
-                })
-                @@include('./components/base/_row-inactive.html', {
-                'name': 'Ronald Richards',
-                'company': 'Adobe',
-                'number': '(302) 555-0107',
-                'mail': 'ronald@adobe.com',
-                'country': 'Israel'
-                })
-                @@include('./components/base/_row-active.html', {
-                'name': 'Marvin McKinney',
-                'company': 'Tesla',
-                'number': '(252) 555-0126',
-                'mail': 'marvin@tesla.com',
-                'country': 'Iran'
-                })
-                @@include('./components/base/_row-active.html', {
-                'name': 'Jerome Bell',
-                'company': 'Google',
-                'number': '(629) 555-0129',
-                'mail': 'jerome@google.com',
-                'country': 'Réunion'
-                })
-                @@include('./components/base/_row-active.html', {
-                'name': 'Kathryn Murphy',
-                'company': 'Microsoft',
-                'number': '(406) 555-0120',
-                'mail': 'kathryn@microsoft.com',
-                'country': 'Curaçao'
-                })
-                @@include('./components/base/_row-active.html', {
-                'name': 'Jacob Jones',
-                'company': 'Yahoo',
-                'number': '(208) 555-0112',
-                'mail': 'jacob@yahoo.com',
-                'country': 'Brazil'
-                })
-                @@include('./components/base/_row-inactive.html', {
-                'name': 'Kristin Watson',
-                'company': 'Facebook',
-                'number': '(704) 555-0127',
-                'mail': 'kristin@facebook.com',
-                'country': 'Åland Islands'
-                })
-              </ul>
             </div>
-            <div class="data__footer-block">
-              <p class="data__par">Showing data 1 to 8 of 256K entries</p>
-              <ul class="data__pagination">
-                <li class="data__item">
-                  <button class="data__pag"><i class="arrow-pag"></i></button>
-                </li>
-                @@include('./components/base/_pag.html', {
-                'number': '1',
-                })
-                @@include('./components/base/_pag.html', {
-                'number': '2',
-                })
-                @@include('./components/base/_pag.html', {
-                'number': '3',
-                })
-                @@include('./components/base/_pag.html', {
-                'number': '4',
-                })
-                <span class="data__points">...</span>
-                @@include('./components/base/_pag.html', {
-                'number': '40',
-                })
-                <li class="data__item">
-                  <button class="data__pag data__pag-second"><i class="arrow-pag"></i></button>
-                </li>
-              </ul>
+            <div class="dashboard__footer-block">
+              <p class="dashboard__par">Showing dashboard 1 to 8 of 256K entries</p>
+              <div class="dashboard__pagination">
+                <ul class="dashboard__list">
+                  <li class="dashboard__item">
+                    <button class="pag pag-arr-first"><i class="arrow-pag"></i></button>
+                  </li>
+                  <li class="dashboard__item dashboard__item-main">
+                    @@include('./components/base/_pag.html', {
+                    'number': '1'
+                    })
+                  </li>
+                  <li class="dashboard__item dashboard__item-main">
+                    @@include('./components/base/_pag.html', {
+                    'number': '2'
+                    })
+                  </li>
+                  <li class="dashboard__item dashboard__item-main">
+                    @@include('./components/base/_pag.html', {
+                    'number': '3'
+                    })
+                  </li>
+                  <li class="dashboard__item dashboard__item-main">
+                    @@include('./components/base/_pag.html', {
+                    'number': '4'
+                    })
+                  </li>
+                  <li class="dashboard__points">...</li>
+                  <li class="dashboard__item dashboard__item-main">
+                    @@include('./components/base/_pag.html', {
+                    'number': '40'
+                    })
+                  </li>
+                  <li class="dashboard__item">
+                    <button class="pag pag-second"><i class="arrow-pag"></i></button>
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>
       </section>
-      <div id="preloader-container">
-        <div id="preloader"></div>
-      </div>
     </main>
   </div>
   @@include('./components/structure/_scripts.html', {

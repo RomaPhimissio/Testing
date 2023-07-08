@@ -14,17 +14,18 @@
 
 <body class="home">
   <div class="wrapper">
-    <main class="main">
-      <section class="board">
-        <div class="board__container">
-          <div class="board__block-content">
-            <div class="board__block-title">
+    <main class="page">
+      <h1 class="visually-hidden">Test Task</h1>
+      <nav class="navboard">
+        <div class="navboard__container">
+          <div class="navboard__block-content">
+            <div class="navboard__block-title">
               <i class="setting"></i>
-              <h2 class="board__title">Dashboard</h2>
-              <span class="board__elem">v.01</span>
+              <h2 class="navboard__title">Dashboard</h2>
+              <span class="navboard__elem">v.01</span>
             </div>
-            <nav class="board__nav">
-              <ul class="board__list">
+            <nav class="navboard__nav">
+              <ul class="navboard__list">
                 <li class="nav-item">
                   <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M8 21H14C19 21 21 19 21 14V8C21 3 19 1 14 1H8C3 1 1 3 1 8V14C1 19 3 21 8 21Z"
@@ -41,13 +42,13 @@
                   <span class="nav-item__text">Dashboard</span>
                 </li>
                 <li class="nav-item">
-    <i class="d"></i>
-    <span class="nav-item__text">Product</span>
-    <span class="nav-item__ic">
-        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M6 12L10 8L6 4" stroke="#9197B3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-        </svg>
-    </span>
+  <i class="d"></i>
+  <span class="nav-item__text">Product</span>
+  <span class="nav-item__ic">
+    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M6 12L10 8L6 4" stroke="#9197B3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+    </svg>
+  </span>
 </li>
                 <li class="nav-item">
                   <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -96,53 +97,50 @@
                   </span>
                 </li>
                 <li class="nav-item">
-    <i class="discount"></i>
-    <span class="nav-item__text">Promote</span>
-    <span class="nav-item__ic">
-        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M6 12L10 8L6 4" stroke="#9197B3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-        </svg>
-    </span>
+  <i class="discount"></i>
+  <span class="nav-item__text">Promote</span>
+  <span class="nav-item__ic">
+    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M6 12L10 8L6 4" stroke="#9197B3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+    </svg>
+  </span>
 </li>
                 <li class="nav-item">
-    <i class="question"></i>
-    <span class="nav-item__text">Help</span>
-    <span class="nav-item__ic">
-        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M6 12L10 8L6 4" stroke="#9197B3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-        </svg>
-    </span>
+  <i class="question"></i>
+  <span class="nav-item__text">Help</span>
+  <span class="nav-item__ic">
+    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M6 12L10 8L6 4" stroke="#9197B3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+    </svg>
+  </span>
 </li>
               </ul>
             </nav>
           </div>
-          <div class="board__block-user">
-            <div class="board__pic">
-              <picture>
-                <source type="image/webp" srcset="img/gallery/avatar.webp">
-                <img src="img/gallery/avatar.png" alt="user">
-              </picture>
+          <div class="navboard__block-user">
+            <div class="navboard__pic-wrap">
+              <div class="navboard__pic"></div>
             </div>
-            <div class="board__block-name">
-              <span class="board__name">Evano</span>
-              <span class="board__desc">Project Manager</span>
+            <div class="navboard__block-name">
+              <span class="navboard__name">Evano</span>
+              <span class="navboard__desc">Project Manager</span>
             </div>
           </div>
         </div>
-      </section>
+      </nav>
 
-      <section class="data">
-        <div class="data__container">
-          <h2 class="visually-hidden">Data base</h2>
-          <p class="data__main-text">Hello Evano 👋🏼,</p>
-          <div class="data__box">
-            <div class="data__board">
-              <div class="data__block-text">
-                <p class="data__subtitle">All Customers</p>
-                <p class="data__text">Active Members</p>
+      <section class="dashboard">
+        <div class="dashboard__container">
+          <h2 class="visually-hidden">dashboard base</h2>
+          <p class="dashboard__main-text">Hello Evano 👋🏼,</p>
+          <div class="dashboard__box">
+            <div class="dashboard__board">
+              <div class="dashboard__block-text">
+                <p class="dashboard__subtitle">All Customers</p>
+                <p class="dashboard__text">Active Members</p>
               </div>
-              <div class="data__field-wrap">
-                <div class="data__field-body">
+              <div class="dashboard__field-wrap">
+                <div class="dashboard__field-body">
                   <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path
                       d="M11 19C15.4183 19 19 15.4183 19 11C19 6.58172 15.4183 3 11 3C6.58172 3 3 6.58172 3 11C3 15.4183 6.58172 19 11 19Z"
@@ -150,109 +148,127 @@
                     <path d="M21 21L16.65 16.65" stroke="#7E7E7E" stroke-width="2" stroke-linecap="round"
                       stroke-linejoin="round" />
                   </svg>
-                  <input class="data__field" type="text" name="texting" placeholder="Search">
+                  <label class="visually-hidden" for="search">Имя пользователя:</label>
+                  <input class="dashboard__field" type="search" name="searching" placeholder="Search" id="search">
                 </div>
               </div>
             </div>
-            <div class="data__table">
-              <div class="data__main-row">
-                <span class="data__row-text">Customer Name</span>
-                <span class="data__row-text">Company</span>
-                <span class="data__row-text">Phone Number</span>
-                <span class="data__row-text">Email</span>
-                <span class="data__row-text">Country</span>
-                <span class="data__row-text">Status</span>
+            <div class="dashboard__table-container">
+              <div class="dashboard__table-wrap">
+                <table class="dashboard__table">
+                  <thead class="dashboard__main-row">
+                    <tr class="dashboard__table-head-row">
+                      <th class="dashboard__table-head-cell"><span class="dashboard__row-text">Customer Name</span>
+                      </th>
+                      <th class="dashboard__table-head-cell"><span class="dashboard__row-text">Company</span></th>
+                      <th class="dashboard__table-head-cell"><span class="dashboard__row-text">Phone Number</span>
+                      </th>
+                      <th class="dashboard__table-head-cell"><span class="dashboard__row-text">Email</span></th>
+                      <th class="dashboard__table-head-cell"><span class="dashboard__row-text">Country</span></th>
+                      <th class="dashboard__table-head-cell"><span class="dashboard__row-text">Status</span></th>
+                    </tr>
+                  </thead>
+                  <tbody class="dashboard__table-body">
+                    <tr class="row-active">
+  <td class="row-active__cell"><span class="row-active__text">Jane Cooper</span></td>
+  <td class="row-active__cell"><span class="row-active__text">Microsoft</span></td>
+  <td class="row-active__cell"><span class="row-active__text">(225) 555-0118</span></td>
+  <td class="row-active__cell"><span class="row-active__text">jane@microsoft.com</span></td>
+  <td class="row-active__cell"><span class="row-active__text">United States</span></td>
+  <td class="row-active__cell"><span class="active">Active</span></td>
+</tr>
+                    <tr class="row-active">
+  <td class="row-active__cell"><span class="row-active__text">Floyd Miles</span></td>
+  <td class="row-active__cell"><span class="row-active__text">Yahoo</span></td>
+  <td class="row-active__cell"><span class="row-active__text">(205) 555-0100</span></td>
+  <td class="row-active__cell"><span class="row-active__text">floyd@yahoo.com</span></td>
+  <td class="row-active__cell"><span class="row-active__text">Kiribati</span></td>
+  <td class="row-active__cell"><span class="inactive">Inactive</span></td>
+</tr>
+                    <tr class="row-active">
+  <td class="row-active__cell"><span class="row-active__text">Ronald Richards</span></td>
+  <td class="row-active__cell"><span class="row-active__text">Adobe</span></td>
+  <td class="row-active__cell"><span class="row-active__text">(302) 555-0107</span></td>
+  <td class="row-active__cell"><span class="row-active__text">ronald@adobe.com</span></td>
+  <td class="row-active__cell"><span class="row-active__text">Israel</span></td>
+  <td class="row-active__cell"><span class="inactive">Inactive</span></td>
+</tr>
+                    <tr class="row-active">
+  <td class="row-active__cell"><span class="row-active__text">Marvin McKinney</span></td>
+  <td class="row-active__cell"><span class="row-active__text">Tesla</span></td>
+  <td class="row-active__cell"><span class="row-active__text">(252) 555-0126</span></td>
+  <td class="row-active__cell"><span class="row-active__text">marvin@tesla.com</span></td>
+  <td class="row-active__cell"><span class="row-active__text">Iran</span></td>
+  <td class="row-active__cell"><span class="active">Active</span></td>
+</tr>
+                    <tr class="row-active">
+  <td class="row-active__cell"><span class="row-active__text">Jerome Bell</span></td>
+  <td class="row-active__cell"><span class="row-active__text">Google</span></td>
+  <td class="row-active__cell"><span class="row-active__text">(629) 555-0129</span></td>
+  <td class="row-active__cell"><span class="row-active__text">jerome@google.com</span></td>
+  <td class="row-active__cell"><span class="row-active__text">Réunion</span></td>
+  <td class="row-active__cell"><span class="active">Active</span></td>
+</tr>
+                    <tr class="row-active">
+  <td class="row-active__cell"><span class="row-active__text">Kathryn Murphy</span></td>
+  <td class="row-active__cell"><span class="row-active__text">Microsoft</span></td>
+  <td class="row-active__cell"><span class="row-active__text">(406) 555-0120</span></td>
+  <td class="row-active__cell"><span class="row-active__text">kathryn@microsoft.com</span></td>
+  <td class="row-active__cell"><span class="row-active__text">Curaçao</span></td>
+  <td class="row-active__cell"><span class="active">Active</span></td>
+</tr>
+                    <tr class="row-active">
+  <td class="row-active__cell"><span class="row-active__text">Jacob Jones</span></td>
+  <td class="row-active__cell"><span class="row-active__text">Yahoo</span></td>
+  <td class="row-active__cell"><span class="row-active__text">(208) 555-0112</span></td>
+  <td class="row-active__cell"><span class="row-active__text">jacob@yahoo.com</span></td>
+  <td class="row-active__cell"><span class="row-active__text">Brazil</span></td>
+  <td class="row-active__cell"><span class="active">Active</span></td>
+</tr>
+                    <tr class="row-active">
+  <td class="row-active__cell"><span class="row-active__text">Kristin Watson</span></td>
+  <td class="row-active__cell"><span class="row-active__text">Facebook</span></td>
+  <td class="row-active__cell"><span class="row-active__text">(704) 555-0127</span></td>
+  <td class="row-active__cell"><span class="row-active__text">kristin@facebook.com</span></td>
+  <td class="row-active__cell"><span class="row-active__text">Åland Islands</span></td>
+  <td class="row-active__cell"><span class="inactive">Inactive</span></td>
+</tr>
+                  </tbody>
+                </table>
               </div>
-              <ul class="data__list">
-                <li class="row-active">
-    <span class="row-active__text">Jane Cooper</span>
-    <span class="row-active__text">Microsoft</span>
-    <span class="row-active__text">(225) 555-0118</span>
-    <span class="row-active__text">jane@microsoft.com</span>
-    <span class="row-active__text">United States</span>
-    <span class="active">Active</span>
-</li>
-                <li class="row-active">
-    <span class="row-active__text">Floyd Miles</span>
-    <span class="row-active__text">Yahoo</span>
-    <span class="row-active__text">(205) 555-0100</span>
-    <span class="row-active__text">floyd@yahoo.com</span>
-    <span class="row-active__text">Kiribati</span>
-    <span class="inactive">Inactive</span>
-</li>
-                <li class="row-active">
-    <span class="row-active__text">Ronald Richards</span>
-    <span class="row-active__text">Adobe</span>
-    <span class="row-active__text">(302) 555-0107</span>
-    <span class="row-active__text">ronald@adobe.com</span>
-    <span class="row-active__text">Israel</span>
-    <span class="inactive">Inactive</span>
-</li>
-                <li class="row-active">
-    <span class="row-active__text">Marvin McKinney</span>
-    <span class="row-active__text">Tesla</span>
-    <span class="row-active__text">(252) 555-0126</span>
-    <span class="row-active__text">marvin@tesla.com</span>
-    <span class="row-active__text">Iran</span>
-    <span class="active">Active</span>
-</li>
-                <li class="row-active">
-    <span class="row-active__text">Jerome Bell</span>
-    <span class="row-active__text">Google</span>
-    <span class="row-active__text">(629) 555-0129</span>
-    <span class="row-active__text">jerome@google.com</span>
-    <span class="row-active__text">Réunion</span>
-    <span class="active">Active</span>
-</li>
-                <li class="row-active">
-    <span class="row-active__text">Kathryn Murphy</span>
-    <span class="row-active__text">Microsoft</span>
-    <span class="row-active__text">(406) 555-0120</span>
-    <span class="row-active__text">kathryn@microsoft.com</span>
-    <span class="row-active__text">Curaçao</span>
-    <span class="active">Active</span>
-</li>
-                <li class="row-active">
-    <span class="row-active__text">Jacob Jones</span>
-    <span class="row-active__text">Yahoo</span>
-    <span class="row-active__text">(208) 555-0112</span>
-    <span class="row-active__text">jacob@yahoo.com</span>
-    <span class="row-active__text">Brazil</span>
-    <span class="active">Active</span>
-</li>
-                <li class="row-active">
-    <span class="row-active__text">Kristin Watson</span>
-    <span class="row-active__text">Facebook</span>
-    <span class="row-active__text">(704) 555-0127</span>
-    <span class="row-active__text">kristin@facebook.com</span>
-    <span class="row-active__text">Åland Islands</span>
-    <span class="inactive">Inactive</span>
-</li>
-              </ul>
             </div>
-            <div class="data__footer-block">
-              <p class="data__par">Showing data 1 to 8 of 256K entries</p>
-              <ul class="data__pagination">
-                <li class="data__item">
-                  <button class="data__pag"><i class="arrow-pag"></i></button>
-                </li>
-                <li class="pag"><button class="pag__text pag-btn">1</button></li>
-                <li class="pag"><button class="pag__text pag-btn">2</button></li>
-                <li class="pag"><button class="pag__text pag-btn">3</button></li>
-                <li class="pag"><button class="pag__text pag-btn">4</button></li>
-                <span class="data__points">...</span>
-                <li class="pag"><button class="pag__text pag-btn">40</button></li>
-                <li class="data__item">
-                  <button class="data__pag data__pag-second"><i class="arrow-pag"></i></button>
-                </li>
-              </ul>
+            <div class="dashboard__footer-block">
+              <p class="dashboard__par">Showing dashboard 1 to 8 of 256K entries</p>
+              <div class="dashboard__pagination">
+                <ul class="dashboard__list">
+                  <li class="dashboard__item">
+                    <button class="pag pag-arr-first"><i class="arrow-pag"></i></button>
+                  </li>
+                  <li class="dashboard__item dashboard__item-main">
+                    <button class="pag pag-btn">1</button>
+                  </li>
+                  <li class="dashboard__item dashboard__item-main">
+                    <button class="pag pag-btn">2</button>
+                  </li>
+                  <li class="dashboard__item dashboard__item-main">
+                    <button class="pag pag-btn">3</button>
+                  </li>
+                  <li class="dashboard__item dashboard__item-main">
+                    <button class="pag pag-btn">4</button>
+                  </li>
+                  <li class="dashboard__points">...</li>
+                  <li class="dashboard__item dashboard__item-main">
+                    <button class="pag pag-btn">40</button>
+                  </li>
+                  <li class="dashboard__item">
+                    <button class="pag pag-second"><i class="arrow-pag"></i></button>
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>
       </section>
-      <div id="preloader-container">
-        <div id="preloader"></div>
-      </div>
     </main>
   </div>
   

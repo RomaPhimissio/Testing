@@ -7,6 +7,10 @@
     border-radius: 8px;
     padding: 11px 8px 11px 11px;
 
+    @media (max-width: 999px) {
+        justify-content: center;
+    }
+
     @media (max-width: 1149px) {
         padding: 11px 6px 11px 8px;
     }
@@ -38,13 +42,24 @@
         font-weight: 500;
         @include fl(14, 21);
 
+        @media (max-width: 999px) {
+            // opacity: 0;
+            // pointer-events: none;
+            // white-space: nowrap;
+            display: none;
+        }
     }
 
     &__ic {
         display: flex;
         justify-content: center;
         align-items: center;
-        margin-left: auto
+        margin-left: auto;
+
+
+        @media (max-width: 999px) {
+            display: none;
+        }
     }
 
     svg {
@@ -56,7 +71,6 @@
 
 .nav-item.current {
     background-color: $plum;
-    // outline: none;
 
     .nav-item__text {
         color: $white;
@@ -66,7 +80,11 @@
         path {
             stroke: $white;
         }
+    }
 
+    .nav-item__ic {
+        transition: all 0.2s ease 0s;
+        transform: rotate(90deg);
     }
 
     .d,
