@@ -40,4 +40,18 @@ itemMainElements.forEach(element => {
    element.addEventListener('click', handleItemClick);
 });
 
+// ! Меняем тему 
+// Находим кнопку по классу
+const swipeButton = document.querySelector('.dashboard__swipe');
 
+// Добавляем обработчик события на клик по кнопке
+swipeButton.addEventListener('click', function () {
+   // Проверяем, есть ли уже класс darken на body
+   if (body.classList.contains('darken')) {
+      // Если класс есть, убираем его
+      body.classList.remove('darken');
+   } else {
+      // Если класса нет, добавляем его
+      body.classList.add('darken');
+   }
+});

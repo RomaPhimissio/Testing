@@ -636,6 +636,7 @@ img {
 }
 
 .navboard {
+  transition: all 0.2s ease 0s;
   background-color: #FFFFFF;
   position: fixed;
   height: 100%;
@@ -653,7 +654,7 @@ img {
   flex-direction: column;
   justify-content: space-between;
   padding: 37px 28px 0;
-  gap: 20px;
+  gap: 30px;
 }
 
 .navboard__block-title {
@@ -667,6 +668,7 @@ img {
   line-height: 1.5;
   color: #000000;
   margin-right: 4px;
+  transition: all 0.2s ease 0s;
 }
 
 .navboard__elem {
@@ -676,6 +678,7 @@ img {
   color: #838383;
   align-self: flex-end;
   padding-bottom: 7px;
+  transition: all 0.2s ease 0s;
 }
 
 .navboard__list {
@@ -715,6 +718,7 @@ img {
   font-size: 0.875em;
   line-height: 1.5;
   letter-spacing: 0.01em;
+  transition: all 0.2s ease 0s;
 }
 
 .navboard__desc {
@@ -722,15 +726,18 @@ img {
   font-size: 0.75em;
   line-height: 1.5;
   display: block;
+  transition: all 0.2s ease 0s;
 }
 
 .setting {
   color: #000000;
   font-size: 2.3125em;
   margin-right: 8px;
+  transition: all 0.2s ease 0s;
 }
 
 .dashboard {
+  transition: all 0.2s ease 0s;
   background-color: #FAFBFF;
   position: relative;
   left: 306px;
@@ -741,15 +748,62 @@ img {
   padding: 41px 8.4% 23% 6.3%;
 }
 
+.dashboard__main-block {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 51px;
+  padding-right: 3%;
+}
+
+.dashboard__field {
+  display: none;
+}
+
+.dashboard__swipe {
+  display: inline-block;
+  background-color: #d2d2d2;
+  width: 90px;
+  height: 40px;
+  border-radius: 100px;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.2s ease 0s;
+}
+
+.dashboard__swipe::before {
+  content: "";
+  position: absolute;
+  background-color: #fff;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  left: 5px;
+  top: 0;
+  bottom: 0;
+  margin: auto 0;
+  transition: all 0.2s ease 0s;
+}
+
+.dashboard__field:checked + .dashboard__swipe {
+  background-color: #5932EA;
+}
+
+.dashboard__field:checked + .dashboard__swipe::before {
+  transform: translateX(50px);
+}
+
 .dashboard__main-text {
   color: #000000;
   font-weight: 500;
   font-size: 1.5em;
   line-height: 1.5;
-  margin-bottom: 51px;
+  transition: all 0.2s ease 0s;
 }
 
 .dashboard__box {
+  transition: all 0.2s ease 0s;
   background-color: #FFFFFF;
   box-shadow: 0px 10px 60px rgba(226, 236, 249, 0.5);
   border-radius: 30px;
@@ -970,6 +1024,44 @@ img {
 .arrow-pag {
   color: #404B52;
   font-size: 0.4375em;
+}
+
+body.darken .navboard {
+  box-shadow: none;
+  background-color: #303030;
+}
+
+body.darken .navboard__title {
+  color: #FFFFFF;
+}
+
+body.darken .navboard__elem {
+  color: #FFFFFF;
+}
+
+body.darken .navboard__name {
+  color: #FFFFFF;
+}
+
+body.darken .navboard__desc {
+  color: #FFFFFF;
+}
+
+body.darken .navboard .setting {
+  color: #FFFFFF;
+}
+
+body.darken .dashboard {
+  background-color: #1C1C1C;
+}
+
+body.darken .dashboard__main-text {
+  color: #FFFFFF;
+}
+
+body.darken .dashboard__box {
+  background-color: #696969;
+  box-shadow: none;
 }
 
 @media (min-width: 1000px) {
