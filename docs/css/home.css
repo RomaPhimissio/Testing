@@ -1218,6 +1218,11 @@ body.darken .dashboard__box {
     justify-content: center;
   }
 
+  .dashboard {
+    width: calc(100% - 80px);
+    left: 80px;
+  }
+
   .dashboard__list {
     gap: 4px;
     flex-wrap: wrap;
